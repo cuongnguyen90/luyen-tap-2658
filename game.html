@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Doan So</title>
+    <style>
+
+
+        .main{
+            width:100%;
+            height:400px;
+        }
+        input[type="button"]{
+            position:relative;
+            margin: -20px -50px;
+            width:100px;
+            top:50%;
+            left:50%;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+<div class="main" >
+    <input type="button" value="START" onclick="startGame()" id="start">
+    <p id="result"></p>
+
+</div>
+<script>
+    function startGame() {
+
+        document.getElementById('result').innerText = "";
+
+        i = 0;
+
+        do {
+            let random = Math.floor(Math.random()*10);
+
+            let input = prompt("Chọn một số trong khoảng từ 1-->10");
+
+            if (random != input){
+
+                alert("Sai roi ! So chinh xac la :"+random);
+                document.getElementById('start').value = " RESTART";
+
+            }
+            else {
+                alert("Chuc mung ban da doan trung !");
+                i = 0 ;
+            }
+            i++;
+        }while (i<3){
+
+            alert("Ban da het 3 luot choi");
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+            //
+
+
+
+
+
+
+
+
+    }
+</script>
+</body>
+</html>

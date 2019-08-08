@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+    function genFibonacci(num){
+        let a = 1;
+        let b = 0;
+        let temp;
+        while (num >= 0){
+            temp = a;
+            a+=b;
+            b = temp;
+            num--;
+        }
+        return b;
+    }
+    for (i = 1 ;i <= 20;i++){
+        y = 0;
+        x = genFibonacci(i);
+        y +=x;
+
+    }
+    document.write("Tong 20 so dau tien trong day la :"+y);
+</script>
+</body>
+</html>
